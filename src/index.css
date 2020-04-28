@@ -4,7 +4,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(100, 20, 70);
+  background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
 }
 
 code {
@@ -16,7 +16,7 @@ code {
   margin-top: 3px;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  background-color: rgb(100, 20, 70);
+  background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
 }
 .nav-item:hover {
   text-decoration: underline;
@@ -27,10 +27,46 @@ code {
   border-radius: 6px;
   background-color: white;
   font-weight: bold;
-  color: rgb(100, 20, 70)
+  color: rgb(190,30,80);
 }
 
 .welcome-text {
-  font-family: 'Kalam', cursive;
+  font-size: larger;
+  display: grid;
+  grid-column: auto;
+  margin: auto;
+  margin-top: 15%;
   color: white;
+}
+
+.heading1 {
+  font-family: Kalam, cursive;
+  font-size: 40px;
+}
+
+#exampleInputEmail1 {
+  border-color: white;
+  height: 50px;
+  margin-right: 5px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+#signupbtn {
+  height: 50px;
+  display: grid;
+  grid-row: auto;
+  border-color: rgb(106, 213, 138);
+  background-color: rgb(106, 213, 138);
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+#signupbtn:hover {
+  height: 50px;
+  display: grid;
+  grid-row: auto;
+  border-color: rgb(85, 210, 120);
+  background-color: rgb(85, 210, 120);
 }
