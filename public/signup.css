@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.navbar {
+    margin-top: 3px;
+    background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
+  }
+
+.form-group {
+    padding: 5%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-control {
+    background-color: black;
+}
+.form-control:focus  {
+    outline: none !important;
+    box-shadow: none !important;
+    }
