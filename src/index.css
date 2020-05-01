@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap');
 
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
+  padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
@@ -35,7 +41,7 @@ code {
   display: grid;
   grid-column: auto;
   margin: auto;
-  margin-top: 15%;
+  margin-top: 12%;
   color: white;
 }
 
@@ -44,19 +50,18 @@ code {
   font-size: 40px;
 }
 
-#exampleInputEmail1 {
+#inputemail {
   border-color: white;
+  display: flex;
   height: 50px;
   margin-right: 5px;
   outline: none !important;
   box-shadow: none !important;
 }
 
-
 #signupbtn {
   height: 50px;
-  display: grid;
-  grid-row: auto;
+  padding: 0.5rem 1.6rem;
   border-color: rgb(106, 213, 138);
   background-color: rgb(106, 213, 138);
   outline: none !important;
@@ -65,8 +70,19 @@ code {
 
 #signupbtn:hover {
   height: 50px;
-  display: grid;
-  grid-row: auto;
   border-color: rgb(110, 185, 138);
   background-color: rgb(110, 185, 138);
 }
+
+
+@media (max-width:1025px) {
+  #inputemail {
+    width: 100%;
+  }
+
+  #signupbtn {
+    margin-top: 5px;
+    width: 98%;
+  }
+}
+
