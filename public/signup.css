@@ -21,16 +21,33 @@ code {
     background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
   }
 
+p {
+  color: #212529;
+  font-weight: bolder;
+}
+
 .form-group {
     padding: 5%;
     background-color: white;
     border-radius: 10px;
 }
 
-.form-control {
-    background-color: black;
+#fullname, #inputemail, #inputpass {
+  padding: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  margin-bottom: 35px;
+  border-radius: 0px;
+  border-color: #ced4da;
+  box-shadow: none !important;
+  }
+
+  #fullname:focus, #inputemail:focus, #inputpass:focus {
+    border-color: rgb(190,30,80);
+    transition: border-color 1s ease-in-out,box-shadow .45s ease-in-out;
+  }
+
+@media (max-width:1025px) {
+  .container {}
 }
-.form-control:focus  {
-    outline: none !important;
-    box-shadow: none !important;
-    }
