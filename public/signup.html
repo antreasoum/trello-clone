@@ -23,19 +23,49 @@
         </a>
     </nav>
 
-   <div class="container col-4">
+   <div class="container-fluid" id="container">
       <form>
           <div class="form-group">
-            <p class="text-md-center">Sign up for your account</p>
+            <h5 class="text-md-center">Sign up for your account</h5>
 
-              <input type="email" class="form-control" id="fullname" aria-describedby="nameHelp" placeholder="Enter name">
-              <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Enter email">
+              <input type="text" class="form-control" id="fullname" aria-describedby="nameHelp" placeholder="Full name">
+              <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Email">
               <input type="password" class="form-control" id="inputpass" placeholder="Password">
+              <input type="password" class="form-control" id="verifypass" placeholder="Verify Password">
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+              <p>By signing up, you confirm that you've read and accepted our Terms of Service and Privacy Policy.</p>
+            <button type="submit" id="button" class="btn btn-primary" disabled>Submit</button>
+
+            <hr>
+
+            <li><a class="global-footer-list-item" href="login.html">Already have an account? Log In</a></li>
           </div>
       </form>
     </div>
+
+    <!---------------------FOOTER--------------------->
+  <footer class="footer mt-auto py-3 fixed-bottom">
+      
+    <hr class="container">
+
+      <ul class="global-footer-list">
+
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Templates</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Prices</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Apps</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Jobs</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Blog</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Developers</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">About</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Help</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Legal</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Cookie Settings</a></li>
+        <li class="nav-item"><a class="global-footer-list-item" href="#">Privacy</a></li>
+        
+      </ul>
+      
+  </footer>
+
         <!---------------------JQUERY, POPPER, BOOTSTRAP--------------------->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

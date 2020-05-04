@@ -24,6 +24,7 @@ code {
   font-family: 'Roboto', sans-serif;
   background-image: linear-gradient(90deg, rgb(100,20,70), rgb(190,30,80));
 }
+
 .nav-item:hover {
   text-decoration: underline;
   color: white;
@@ -51,7 +52,8 @@ code {
 }
 
 #inputemail {
-  border-color: white;
+  background-color: rgb(255,255,255);
+  border-color: rgb(255,255,255);
   display: flex;
   height: 50px;
   margin-right: 5px;
@@ -74,7 +76,6 @@ code {
   background-color: rgb(110, 185, 138);
 }
 
-
 @media (max-width:1025px) {
   #inputemail {
     width: 100%;
@@ -82,7 +83,40 @@ code {
 
   #signupbtn {
     margin-top: 5px;
-    width: 98%;
+    width: 99%;
   }
 }
 
+.container {
+  display: flex;
+  background-color: white;
+  width: 50%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 0 !important;
+  color: white;
+}
+
+.mt-auto {
+  margin-top: auto 1im
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer ul li {
+  display: inline-block;
+  margin: 0 .4em;
+}
+
+footer ul li a {
+  color: rgb(255, 255, 255);
+}
+
+footer ul li a:hover {
+  color:rgb(255,255,255);
+  text-decoration: none;
+}
