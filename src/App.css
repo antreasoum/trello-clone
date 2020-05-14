@@ -3,7 +3,7 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
-  height: 100%;
+  background-color: #0000;
 }
 
 body {
@@ -11,8 +11,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
-  background-image: linear-gradient(45deg, rgb(100,20,70), rgb(190,30,80));
+  background-color: rgb(20, 20, 20);
 }
 
 code {
@@ -25,7 +24,6 @@ code {
   align-items: initial;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
-  background-image: linear-gradient(175deg, rgb(100,20,70), rgb(190,30,80));
 }
 
 .nav-links {
@@ -77,16 +75,16 @@ code {
 #signupbtn {
   height: 50px;
   padding: 0.5rem 1.6rem;
-  border-color: rgb(106, 213, 138);
-  background-color: rgb(106, 213, 138);
+  border-color: rgb(125, 20, 50);
+  background-color: rgb(190,30,80);
   outline: none !important;
   box-shadow: none !important;
 }
 
 #signupbtn:hover {
   height: 50px;
-  border-color: rgb(110, 185, 138);
-  background-color: rgb(110, 185, 138);
+  border-color: rgb(125, 20, 50);
+  background-color: rgb(125, 20, 50);;
 }
 
 @media (max-width:1025px) {

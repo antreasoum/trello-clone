@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import login from './pages/login';
-import signup from './pages/signup';
+import login from './components/login';
+import signup from './components/signup';
 import Nav from './components/nav';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
@@ -24,6 +24,8 @@ const Home = () => (
 
 <div>
 
+<title>Trello Clone</title>
+
 <container className="welcome-text col-5 text-md-center">
 <h1 className="heading1">
   Trello lets you work more collaboratively and get more done.
@@ -39,7 +41,7 @@ const Home = () => (
 <form action="/signup">
 <div className="form-group form-inline">
   <input className="form-control ml-auto" id="mainemail" type="email" name="email" placeholder="Email" required></input>
-  <button type="submit" id="signupbtn" className="btn btn-primary btn-lg mr-auto" href="signup.html">Sign up - It's Free!</button>
+  <button type="submit" id="signupbtn" className="btn btn-primary btn-lg mr-auto" href="signup">Sign up - It's Free!</button>
 </div>
 </form>
 </container>
@@ -51,17 +53,17 @@ const Home = () => (
 
 <ul className="global-footer-list">
 
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Templates</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Prices</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Apps</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Jobs</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Blog</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Developers</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">About</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Help</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Legal</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Cookie Settings</a></li>
-  <li className="nav-item"><a className="global-footer-list-item" href="#">Privacy</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Templates</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Prices</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Apps</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Jobs</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Blog</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Developers</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">About</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Help</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Legal</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Cookie Settings</a></li>
+  <li className="nav-item"><a className="global-footer-list-item" href="/">Privacy</a></li>
   
 </ul>
 
