@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
-import login from './components/pages/login';
-import signup from './components/pages/signup';
-import boards from './components/boards';
-import Nav from './components/nav';
-import trelloList from './components/trelloList';
+import '../components/style/App.css';
+import login from './pages/login';
+import signup from './pages/signup';
+import boards from './boards';
+import Nav from './nav';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
