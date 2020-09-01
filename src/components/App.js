@@ -1,7 +1,74 @@
-import React from 'react';
+import React,{Component} from "react";
+import "./style/App.css"
+import TrelloList from "./TrelloList";
+import { connect } from "react-redux";
+import TrelloActionButton from "./TrelloActionButton";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { sort } from "../actions";
+
+
+class App extends Component {
+
+  //Reorder Logic
+  onDragEnd = (result) => {
+    const { destination, source, draggableID, type } = result;
+
+    if(!destination) {
+      return;
+    }
+
+    this.props.dispatch(
+      sort(
+        source.droppableId,
+        destination.droppableId,
+        source.index,
+        destination.index,
+        draggableID,
+        type
+      )
+    );
+  };
+
+  render() {
+  const {lists} = this.props;
+    return (
+      <DragDropContext onDragEnd={this.onDragEnd}>
+        <div className="App">
+          <Droppable droppableId="all-lists" direction="horizontal" type="list">
+            {provided => (
+              <div className="List" {...provided.droppableProps} ref={provided.innerRef}>
+
+                {lists.map((list, index) => (
+                  <TrelloList 
+                    listID={list.id} 
+                    key={list.id} 
+                    title={list.title} 
+                    cards={list.cards}
+                    index={index}
+                  />
+                ))}
+
+                {provided.placeholder}
+                <TrelloActionButton list/>
+              </div>
+            )}
+          </Droppable>
+        </div>
+      </DragDropContext>
+    );
+  }
+}
+
+const mapStateToProps = state => ({
+  lists: state.lists
+});
+
+export default connect(mapStateToProps) (App);
+
+/*import React from 'react';
 import login from '../pages/login';
 import signup from '../pages/signup';
-import boards from './boards'
+import boards from './boards';
 import Nav from './nav';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import "./style/boards.css"
@@ -49,7 +116,6 @@ const Home = () => (
       </form>
     </container>
 
-
       <footer className="footer mt-auto py-3 fixed-bottom">
 
         <hr className="container"></hr>
@@ -75,4 +141,4 @@ const Home = () => (
   </div>
 );
 
-export default App;
+export default App;*/
