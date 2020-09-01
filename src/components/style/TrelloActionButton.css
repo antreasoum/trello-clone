@@ -1,0 +1,30 @@
+.cardcontainer {
+    overflow: visible;
+    min-height: 80;
+    min-width: 272;
+    padding: 6px, 8px, 2px;
+}
+
+.textArea {
+    resize: none;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.addButton {
+    color: white;
+    background-color: #5aac44;
+}
+
+.xButton {
+    margin-left: 5px;
+}

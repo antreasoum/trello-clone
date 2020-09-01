@@ -1,0 +1,10 @@
+.boards {
+    text-align: center;
+  }
+  
+.List {
+    display: flex;
+    column-gap: 5px;
+    
+  }
+  

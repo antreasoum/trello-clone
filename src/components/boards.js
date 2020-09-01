@@ -1,5 +1,5 @@
 import React,{Component} from "react";
-import './style/boards.css';
+import "./style/boards.css"
 import TrelloList from "./TrelloList";
 import { connect } from "react-redux";
 import TrelloActionButton from "./TrelloActionButton";

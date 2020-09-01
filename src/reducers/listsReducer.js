@@ -1,5 +1,4 @@
-function listsReducer() {return(null)}
-/*import { CONSTANTS } from "../actions";
+import { CONSTANTS } from "../actions";
 
 let listID = 2;
 let cardID = 8;
@@ -148,5 +147,5 @@ const listsReducer = (state = initialState, action) => {
             return state;
     }
 };
-*/
+
 export default listsReducer;
