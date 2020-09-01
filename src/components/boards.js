@@ -1,4 +1,4 @@
-/*import React,{Component} from "react";
+import React,{Component} from "react";
 import "./style/boards.css"
 import TrelloList from "./TrelloList";
 import { connect } from "react-redux";
@@ -63,4 +63,4 @@ const mapStateToProps = state => ({
   lists: state.lists
 });
 
-export default connect(mapStateToProps) (boards);*/
+export default connect(mapStateToProps) (boards);

@@ -1,10 +1,10 @@
 .boards {
     text-align: center;
+    margin: 0;
   }
   
 .List {
     display: flex;
     column-gap: 5px;
-    
   }
   

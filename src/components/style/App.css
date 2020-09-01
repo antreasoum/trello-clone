@@ -1,16 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Roboto:wght@300;400;700;900&display=swap');
-.App {
-  text-align: center;
-}
 
-.List {
-  display: flex;
-  column-gap: 5px;
-  
-}
-
-
-/*html {
+html {
   box-sizing: border-box;
   scroll-behavior: smooth;
   background-color: #0000;
@@ -30,7 +20,7 @@ code {
 }
 
 /*-----------NAVBAR-----------*/
-/*.navbar {
+.navbar {
   align-items: initial;
   font-size: 16px;
   font-family: 'Roboto', sans-serif;
@@ -54,7 +44,7 @@ code {
 }
 
 /*-----------MAIN CONTENT-----------*/
-/*.welcome-text {
+.welcome-text {
   font-size: larger;
   display: grid;
   grid-column: auto;
@@ -140,4 +130,4 @@ footer ul li a {
 footer ul li a:hover {
   color:rgb(240,240,240);
   text-decoration: none;
-}*/
+}
