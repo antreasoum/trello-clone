@@ -1,7 +1,7 @@
 import React from 'react';
 import '../components/style/App.css';
-import login from './pages/login';
-import signup from './pages/signup';
+import login from '../pages/login';
+import signup from '../pages/signup';
 import boards from './boards';
 import Nav from './nav';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';

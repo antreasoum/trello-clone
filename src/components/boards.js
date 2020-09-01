@@ -1,33 +1,66 @@
-import React from 'react';
+import React,{Component} from "react";
 import './style/boards.css';
+import TrelloList from "./TrelloList";
+import { connect } from "react-redux";
+import TrelloActionButton from "./TrelloActionButton";
+import { DragDropContext, Droppable } from "react-beautiful-dnd";
+import { sort } from "../actions";
 
-function boards() {
-    return (
 
-        <div>
-        
-      <container class="login container-fluid">
-        <div class="container-fluid mx-auto" id="resize">
-          <div class="login-group">
+class boards extends Component {
 
-            <h5 class="text-md-center">Log In to Trello</h5>
+  //Reorder Logic
+  onDragEnd = (result) => {
+    const { destination, source, draggableID, type } = result;
 
-            <input type="email" class="form-control" id="inputemail" aria-describedby="emailHelp" placeholder="Email"></input>
-            <input type="password" class="form-control" id="inputpass" placeholder="Password"></input>
-            <button type="submit" id="button" class="btn btn-primary" disabled>Log In</button>
-            
-            <hr></hr>
+    if(!destination) {
+      return;
+    }
 
-            <ul class="main-list">
-              <a class="main-list-item" href="/redirect">Can't log in?</a>
-              <a class="main-list-item" href="/signup">Sign Up</a>
-            </ul>
-
-          </div>
-        </div>
-      </container>
-      </div>
+    this.props.dispatch(
+      sort(
+        source.droppableId,
+        destination.droppableId,
+        source.index,
+        destination.index,
+        draggableID,
+        type
+      )
     );
+  };
+
+  render() {
+  const {lists} = this.props;
+    return (
+      <DragDropContext onDragEnd={this.onDragEnd}>
+        <div className="boards">
+          <Droppable droppableId="all-lists" direction="horizontal" type="list">
+            {provided => (
+              <div className="List" {...provided.droppableProps} ref={provided.innerRef}>
+
+                {lists.map((list, index) => (
+                  <TrelloList 
+                    listID={list.id} 
+                    key={list.id} 
+                    title={list.title} 
+                    cards={list.cards}
+                    index={index}
+                  />
+                ))}
+
+                {provided.placeholder}
+                <TrelloActionButton list/>
+              </div>
+            )}
+          </Droppable>
+        </div>
+      </DragDropContext>
+    );
+  }
 }
 
-export default boards;
+const mapStateToProps = state => ({
+  lists: state.lists
+});
+
+export default connect(mapStateToProps) (boards);
