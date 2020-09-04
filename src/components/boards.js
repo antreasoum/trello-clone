@@ -1,19 +1,18 @@
-import React,{Component} from "react";
-import "./style/boards.css"
+import React, { Component } from "react";
+import "./style/boards.css";
 import TrelloList from "./TrelloList";
 import { connect } from "react-redux";
 import TrelloActionButton from "./TrelloActionButton";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 import { sort } from "../actions";
-
+import Nav2 from "./nav";
 
 class boards extends Component {
-
   //Reorder Logic
   onDragEnd = (result) => {
     const { destination, source, draggableID, type } = result;
 
-    if(!destination) {
+    if (!destination) {
       return;
     }
 
@@ -30,26 +29,29 @@ class boards extends Component {
   };
 
   render() {
-  const {lists} = this.props;
+    const { lists } = this.props;
     return (
       <DragDropContext onDragEnd={this.onDragEnd}>
         <div className="boards">
           <Droppable droppableId="all-lists" direction="horizontal" type="list">
-            {provided => (
-              <div className="List" {...provided.droppableProps} ref={provided.innerRef}>
-
+            {(provided) => (
+              <div
+                className="List"
+                {...provided.droppableProps}
+                ref={provided.innerRef}
+              >
                 {lists.map((list, index) => (
-                  <TrelloList 
-                    listID={list.id} 
-                    key={list.id} 
-                    title={list.title} 
+                  <TrelloList
+                    listID={list.id}
+                    key={list.id}
+                    title={list.title}
                     cards={list.cards}
                     index={index}
                   />
                 ))}
 
                 {provided.placeholder}
-                <TrelloActionButton list/>
+                <TrelloActionButton list />
               </div>
             )}
           </Droppable>
@@ -59,8 +61,8 @@ class boards extends Component {
   }
 }
 
-const mapStateToProps = state => ({
-  lists: state.lists
+const mapStateToProps = (state) => ({
+  lists: state.lists,
 });
 
-export default connect(mapStateToProps) (boards);
+export default connect(mapStateToProps)(boards);

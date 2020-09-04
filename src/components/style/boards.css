@@ -1,10 +1,9 @@
 .boards {
-    text-align: center;
-    margin: 0;
-  }
-  
+  text-align: center;
+  margin: 7px;
+}
+
 .List {
-    display: flex;
-    column-gap: 5px;
-  }
-  
+  display: flex;
+  column-gap: 5px;
+}
