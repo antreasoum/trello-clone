@@ -98,37 +98,3 @@ code {
     width: 99%;
   }
 }
-
-.container {
-  display: flex;
-  background-color: rgb(240, 240, 240);
-  width: 50%;
-}
-
-footer {
-  text-align: center;
-  margin-top: 0 !important;
-  color: rgb(240, 240, 240);
-}
-
-.mt-auto {
-  margin-top: auto !important;
-}
-
-footer ul {
-  padding: 0;
-}
-
-footer ul li {
-  display: inline-block;
-  margin: 0 1em;
-}
-
-footer ul li a {
-  color: rgb(240, 240, 240);
-}
-
-footer ul li a:hover {
-  color: rgb(240, 240, 240);
-  text-decoration: none;
-}

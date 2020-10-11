@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/login.css";
+import Footer from "../components/footer";
 
 function login() {
   return (
@@ -39,70 +40,7 @@ function login() {
           </div>
         </div>
       </container>
-
-      <footer class="footer mt-auto py-3 fixed-bottom">
-        <hr class="container"></hr>
-
-        <ul class="global-footer-list">
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Templates
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Prices
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Apps
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Jobs
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Blog
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Developers
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              About
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Help
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Legal
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Cookie Settings
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="global-footer-list-item" href="#">
-              Privacy
-            </a>
-          </li>
-        </ul>
-
-        <p> © Copyright 2020. All rights reserved. </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
